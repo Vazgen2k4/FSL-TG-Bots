@@ -1,6 +1,7 @@
 let forTitle = document.querySelector('.section__title.for__title');
 let forCards = document.querySelector('.for__cards');
 
+adaptiveTitle();
 addEventListener('resize', adaptiveTitle);
 
 function adaptiveTitle() {
