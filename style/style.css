@@ -24,6 +24,11 @@
     font-family: var(--primaryFont);
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 h1,
 h2,
 h3,
