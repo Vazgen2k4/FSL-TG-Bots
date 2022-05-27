@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'FSL-icons';
-  src:  url('./../assets/icon-fonts/FSL-icons.eot?2w70gi');
-  src:  url('./../assets/icon-fonts/FSL-icons.eot?2w70gi#iefix') format('embedded-opentype'),
-    url('./../assets/icon-fonts/FSL-icons.ttf?2w70gi') format('truetype'),
-    url('./../assets/icon-fonts/FSL-icons.woff?2w70gi') format('woff'),
-    url('./../assets/icon-fonts/FSL-icons.svg?2w70gi#FSL-icons') format('svg');
+  font-family: 'icomoon';
+  src:  url('./../assets/icon-fonts/icomoon.eot?4aev9');
+  src:  url('./../assets/icon-fonts/icomoon.eot?4aev9#iefix') format('embedded-opentype'),
+    url('./../assets/icon-fonts/icomoon.ttf?4aev9') format('truetype'),
+    url('./../assets/icon-fonts/icomoon.woff?4aev9') format('woff'),
+    url('./../assets/icon-fonts/icomoon.svg?4aev9#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="_icon-"], [class*=" _icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'FSL-icons' !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,48 +25,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-book-open:before {
-  content: "\e902";
-}
-._icon-chevron-down:before {
-  content: "\e903";
-}
-._icon-close:before {
-  content: "\e904";
-}
-._icon-icon:before {
-  content: "\e905";
-}
-._icon-minus:before {
-  content: "\e906";
-}
-._icon-log-in:before {
-  content: "\e907";
-}
-._icon-log-out:before {
-  content: "\e908";
-}
-._icon-menu:before {
-  content: "\e909";
-}
-._icon-message-circle:before {
-  content: "\e90a";
-}
-._icon-search:before {
-  content: "\e90b";
-}
-._icon-truck:before {
-  content: "\e90c";
-}
-._icon-up-arrow:before {
-  content: "\e90d";
-}
-._icon-shopping-cart:before {
+.icon-header-bg:before {
   content: "\e900";
 }
-._icon-language:before {
+.icon-partner-icon:before {
+  content: "\e90e";
+}
+.icon-chat-icon:before {
+  content: "\e90c";
+}
+.icon-education-icon:before {
+  content: "\e90d";
+}
+.icon-delivery-icon:before {
+  content: "\e90b";
+}
+.icon-shop-icon:before {
+  content: "\e90a";
+}
+.icon-cafe-icon:before {
+  content: "\e909";
+}
+.icon-chat-bot-elips:before {
+  content: "\e908";
+}
+.icon-education-elips:before {
+  content: "\e907";
+}
+.icon-delivery-elips:before {
+  content: "\e906";
+}
+.icon-shop-elips:before {
+  content: "\e905";
+}
+.icon-cafe-elips:before {
+  content: "\e904";
+}
+.icon-triangle:before {
+  content: "\e903";
+}
+.icon--about-bg:before {
   content: "\e901";
 }
-._icon-coffee:before {
-  content: "\e910";
+.icon-circle:before {
+  content: "\e902";
 }

@@ -42,3 +42,33 @@ function adaptiveFunctionsSection() {
     let isAdaptive = innerWidth > functionTitle.getAttribute('data-adptive');
     isAdaptive ? functionTxt.append(functionTitle) : functionTxt.before(functionTitle);
 }
+
+// Servises card
+let servicesCards = document.querySelector('.services__cards');
+let servicesCardList = [...document.querySelectorAll('.services__card')];
+
+if (servicesCardList.length > 0) {
+    const adaptiveSize = servicesCards.getAttribute('data-adptive');
+    servicesCardList.forEach((card) => {
+        card.addEventListener('mouseenter', (e) => {
+            if (innerWidth > adaptiveSize) {
+                servicesCardList.forEach((item) => item.classList.remove('active'));
+                card.classList.add('active');
+            }
+        });
+    });
+
+    adaptiveCards();
+    addEventListener('resize', adaptiveCards);
+
+    function adaptiveCards() {
+        let isDesctop = innerWidth > adaptiveSize;
+
+        if (isDesctop) {
+            servicesCardList.forEach((item) => item.classList.remove('active'));
+            servicesCardList[1].classList.add('active');
+        } else {
+            servicesCardList.forEach((item) => item.classList.add('active'));
+        }
+    }
+}
