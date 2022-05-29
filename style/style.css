@@ -85,6 +85,11 @@ body._no__scroll {
     border: none;
 }
 
+body.active .btn,
+body.active .btn__seccondary {
+    filter: unset;
+}
+
 .btn__seccondary {
     border: 1px solid var(--primaryColor);
     color: var(--primaryColor);
@@ -138,6 +143,95 @@ body._no__scroll {
     font-size: 36px;
     line-height: 49px;
     color: var(--titleColor);
+}
+
+.nav__menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50px;
+    height: 30px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+
+
+.theme__label {
+    margin-left: 10px;
+    width: 55px;
+    height: 28px;
+    border: 2px solid var(--themeBtnBorder);
+    border-radius: 100px;
+    position: relative;
+    background: var(--blackColor);
+}
+
+.theme__label.active {
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%);
+}
+
+.theme__label::after {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 6px;
+    background: url('./../assets/icons/theme_btn/Sky.svg');
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    display: none;
+}
+
+.theme__label.active::after {
+    display: block;
+}
+
+.theme__label::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 11px;
+    background: url('./../assets/icons/theme_btn/Stars.svg');
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.theme__label.active::before {
+    display: none;
+}
+
+.label__ball {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 2px;
+    user-select: none;
+    max-width: 20px;
+    height: 20px;
+    width: 100%;
+    border-radius: 50%;
+    background: url('./../assets/icons/theme_btn/Moon.svg') no-repeat center;
+    z-index: 1;
+    transition: right .3s linear,
+        transform .3s linear;
+}
+
+.theme__label.active .label__ball {
+    right: calc(100% - 2px);
+    transform: translate(100%, -50%) rotate(-180deg);
+    background: url('./../assets/icons/theme_btn/Sun.svg') no-repeat center;
 }
 
 /* Navigation - Навигиционная панель сайта
@@ -369,14 +463,39 @@ body._no__scroll {
 
 .for__item-img {
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
 
+.for__item-img>i._icon {
+    color: var(--forPrimaryColor);
+    font-size: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.for__item-img>i._elips {
+    position: absolute;
+    left: var(--left);
+    top: var(--top);
+    color: var(--bgColor);
+    z-index: 0;
+    font-size: 80px;
+}
+
+body.active .for__item-img>i._elips {
+    color: var(--color);
 }
 
 .for__item-descr {
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    color: var(--secondaryColor);
+    color: var(--forPrimaryColor);
 }
 
 /* Starting */
@@ -518,6 +637,11 @@ body._no__scroll {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.why__item-img>i {
+    font-size: 20px;
+    color: var(--vectorColor);
 }
 
 .why__item-txt {
@@ -1610,11 +1734,12 @@ body._no__scroll {
     .header__content-img {
         margin-top: -130px;
     }
-    .header__content-img>img { 
+
+    .header__content-img>img {
         max-width: 131px;
     }
-    
-    
+
+
 
     .header__link {
         padding: 0;

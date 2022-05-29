@@ -1,4 +1,4 @@
-const themeBtn = document.querySelector('.theme__btn');
+const themeBtn = document.querySelector('.theme__label');
 
 localStorage.lightMode == 'on' ? themeBtn.classList.add('active') : themeBtn.classList.remove('active');
 themeSet(themeBtn.classList.contains('active'));
@@ -20,7 +20,10 @@ function themeSave() {
 }
 
 function themeSet(isLight) {
+    let body = document.querySelector('body');
+
     if (isLight) {
+        body.classList.add('active');
         document.documentElement.style.setProperty('--primaryColor', '#C676B2');
         document.documentElement.style.setProperty('--secondaryColor', '#1EA8E7 ');
         document.documentElement.style.setProperty('--titleColor', '#081836');
@@ -31,8 +34,18 @@ function themeSet(isLight) {
         // Цвета кнопок
         document.documentElement.style.setProperty('--btnHoverColor', '#E95FC6');
         document.documentElement.style.setProperty('--btnPressColor', '#C02499');
+        // Цвет кнопки темы
+        document.documentElement.style.setProperty('--themeBtnBorder', '#085CFF');
+        document.documentElement.style.setProperty('--blackColor', '#009EFD');
+        // Цвета болока For
+        document.documentElement.style.setProperty('--forPrimaryColor', '#081836');
         
+        
+        document.documentElement.style.setProperty('--vectorColor', '#E3EDF2');
+
     } else {
+        body.classList.remove('active');
+
         document.documentElement.style.setProperty('--primaryColor', '#1EA8E7');
         document.documentElement.style.setProperty('--secondaryColor', '#2AF598 ');
         document.documentElement.style.setProperty('--titleColor', '#fff');
@@ -43,5 +56,12 @@ function themeSet(isLight) {
         // Цвета кнопок
         document.documentElement.style.setProperty('--btnHoverColor', '#1472E1');
         document.documentElement.style.setProperty('--btnPressColor', '#0C4E9B');
+        // Цвет кнопки темы    
+        document.documentElement.style.setProperty('--themeBtnBorder', '#08FFC8');
+        document.documentElement.style.setProperty('--blackColor', '#000');
+        // Цвета болока For
+        document.documentElement.style.setProperty('--forPrimaryColor', '#2AF598');
+        
+        document.documentElement.style.setProperty('--vectorColor', '#081836');
     }
 }
