@@ -978,15 +978,15 @@ body.active .for__item-img>i._elips {
     align-items: center;
     width: 24px;
     height: 24px;
-    border-radius: 50%;
-    border: 2px solid var(--secondaryTextColor);
+    color: var(--secondaryTextColor);
     left: 0;
     top: 50%;
     transition: border .3s linear;
+    font-size: 24px;
 }
 
 .services__card.active .services__list-img {
-    border: 2px solid var(--secondaryColor);
+    color: var(--secondaryColor);
 }
 
 .services__card-btn {
@@ -1208,7 +1208,7 @@ body.active .for__item-img>i._elips {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: var(--primaryColor);
+    background: #1EA8E7;
 }
 
 .footer__content-right {
@@ -1683,6 +1683,7 @@ body.active .for__item-img>i._elips {
     .services__list-img {
         width: 14px;
         height: 14px;
+        font-size: 14px;
     }
 
 

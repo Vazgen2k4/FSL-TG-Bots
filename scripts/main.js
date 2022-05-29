@@ -21,6 +21,7 @@ let reviewsVideo = new Swiper('.reviews__video-slider', {
     spaceBetween: 30,
 });
 
+// Revies comment Slider
 let reviewsComennt = new Swiper(".reviews__comennt-slider", {
     cssMode: true,
     navigation: {
@@ -29,6 +30,13 @@ let reviewsComennt = new Swiper(".reviews__comennt-slider", {
     },
     mousewheel: true,
     keyboard: true,
+});
+
+
+// Blog Slider
+let blogSlider = new Swiper("", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
 });
 
 
