@@ -34,7 +34,7 @@ let reviewsComennt = new Swiper(".reviews__comennt-slider", {
 
 
 // Blog Slider
-let blogSlider = new Swiper("", {
+let blogSlider = new Swiper(".blog__section-slider", {
     slidesPerView: "auto",
     spaceBetween: 30,
 });
@@ -79,4 +79,18 @@ if (servicesCardList.length > 0) {
             servicesCardList.forEach((item) => item.classList.add('active'));
         }
     }
+}
+
+// Blog card 
+
+let blogCards = [...document.querySelectorAll('.blog__slide')];
+if (blogCards.length > 0) {
+    blogCards.forEach((card) => {
+        card.addEventListener('mouseenter', (e) => {
+            // if (innerWidth > adaptiveSize) {
+                blogCards.forEach((item) => item.classList.remove('active'));
+                card.classList.add('active');
+            // }
+        });
+    });
 }
